@@ -13,7 +13,6 @@ typedef struct Memory {
 
 int readfn(void *ptr, char *buf, int words) {
   Memory *mem = (Memory *)ptr;
-  int return_value = 0;
   int words_to_read = 0;
   int remain_space = mem->size - mem->pos;
 
@@ -30,7 +29,6 @@ int readfn(void *ptr, char *buf, int words) {
 
 int writefn(void *ptr, const char *buf, int words) {
   Memory *mem = (Memory *)ptr;
-  int return_value = 0;
   int words_to_write = 0;
   int remain_space = mem->size - mem->pos;
 
